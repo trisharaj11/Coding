@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPECIFITY</title>
+    <style>
+        /*specificity-->1 element selector*/
+        h1{
+            color:greenyellow
+        }
+        /*specificity-->10 class selector*/
+        .yellow{
+            color:orange;
+        }
+        h1.cred{   /* h-->1, cred-->10 h1+cred=11 so this will print*/
+            color: hotpink;
+        }
+         /*specificity-->10 class selector*/
+        .cgreen{
+            color: rebeccapurple;
+        }
+         /*specificity-->10 class selector*/
+        .cpurple{
+            color: violet;
+        }
+        /* jo baad m hoga uska color aayga*/
+         /*specificity-->10 attribute selector*/
+        [data-x=a]{
+            color: chartreuse; /* attribute selector */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1 class="yellow cred cpurple cgreen" data-x="a">HII I AM TRISHA</h1>
+    </div>
+</body>
+</html>
